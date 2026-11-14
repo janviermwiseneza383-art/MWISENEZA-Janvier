@@ -26,7 +26,7 @@ nav a:hover{color:var(--gold2)}
 .hero{min-height:92vh;display:flex;align-items:center;padding:0 5vw}
 .hero .in{max-width:560px}
 .hero p.hi{color:var(--sky);font-weight:600;margin-bottom:10px}
-.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;background:linear-gradient(100deg,var(--gold2),var(--gold) 55%,#e39b1d);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.hero h1{font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:800;padding:0 .14em .1em 0;background:linear-gradient(100deg,var(--gold2),var(--gold) 55%,#e39b1d);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
 .hero h2{font-size:clamp(1.1rem,3vw,1.5rem);font-weight:600;color:var(--tx);margin-bottom:16px}
 .hero p.d{color:var(--mut);max-width:46ch;margin-bottom:28px}
 .btn{display:inline-block;border:0;cursor:pointer;font:600 1rem Manrope,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s}
@@ -55,17 +55,43 @@ input:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 
 textarea{min-height:130px;resize:vertical}
 #st{margin-top:14px;font-weight:600;min-height:1.5em}
 #st.ok{color:#6ee7a8}#st.er{color:#ff8a8a}
+.me{display:flex;align-items:center;gap:18px;margin-bottom:22px;perspective:800px;flex-wrap:wrap}
+.ph{position:relative;width:132px;height:132px;flex:none;border-radius:50%;box-shadow:0 0 34px rgba(245,192,74,.45),0 0 80px rgba(58,116,255,.4),0 16px 30px rgba(0,0,0,.5);transition:transform .15s ease-out}
+.ph::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--gold),var(--blue),var(--gold2),var(--blue),var(--gold));animation:spin 7s linear infinite}
+.ph img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);border-radius:50%;object-fit:cover;background:var(--navy)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loc{color:var(--mut);font-size:.95rem;max-width:26ch}
+.big{font-size:2rem;display:block;margin-bottom:10px}
+.lw{position:relative}
+body:not(.authed) .lk{filter:blur(9px);user-select:none;pointer-events:none}
+.gate{position:absolute;inset:0;z-index:3;display:none;align-items:center;justify-content:center;padding:20px;text-align:center}
+body:not(.authed) .gate{display:flex}
+.gate div{padding:24px;border-radius:20px;background:rgba(4,8,20,.72);border:1px solid var(--line);backdrop-filter:blur(8px)}
+.gate p{margin-bottom:14px;color:var(--mut)}
+#authBtn{margin:0;padding:8px 18px;font-size:.9rem}
+dialog{margin:auto;width:min(92vw,400px);padding:28px;border-radius:22px;border:1px solid var(--line);background:rgba(11,22,51,.96);color:var(--tx);box-shadow:0 0 70px rgba(58,116,255,.35)}
+dialog::backdrop{background:rgba(2,5,14,.72);backdrop-filter:blur(4px)}
+dialog h3{font-size:1.5rem;margin-bottom:16px;color:var(--gold2)}
+#af{max-width:none;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.gb{width:100%;margin-bottom:14px;background:#fff;color:#222;border:0;border-radius:999px;padding:12px;font:600 1rem Manrope,sans-serif;cursor:pointer}
+.lnk{background:none;border:0;color:var(--gold2);cursor:pointer;font:inherit;text-decoration:underline;margin-top:10px}
+#ae{color:#ff8a8a;font-weight:600;min-height:1.4em;margin-top:8px}
+.soc{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:26px;perspective:800px}
+.soc a{width:60px;height:60px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.1),rgba(255,255,255,.03));border:1px solid var(--line);color:var(--gold2);backdrop-filter:blur(12px);box-shadow:0 12px 28px rgba(0,0,0,.4);transition:transform .15s ease-out,color .2s,border-color .2s}
+.soc a:hover{color:var(--gold);border-color:rgba(245,192,74,.55)}
+.soc svg{width:26px;height:26px}
 footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
 @media(max-width:640px){.hero{align-items:flex-end;padding-bottom:9vh}.btn.o{margin:10px 0 0}nav div a:nth-child(n+4){display:none}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
-<nav><b>MJ</b><div><a href="#ahabanza">Ahabanza</a><a href="#ubumenyi">Ubumenyi</a><a href="#imishinga">Imishinga</a><a href="#andika">Nyandikire</a></div></nav>
+<nav><b>MJ</b><div><a href="#ahabanza">Ahabanza</a><a href="#ubumenyi">Ubumenyi</a><a href="#imishinga">Imishinga</a><a href="#andika">Nyandikire</a></div><button class="btn o" id="authBtn" type="button">Injira</button></nav>
 
 <header class="hero" id="ahabanza">
   <div class="in">
+    <div class="me"><div class="ph"><img src="https://i.postimg.cc/kGT9sTHp/84A7500.jpg" alt="Ifoto ya Mwiseneza Janvier" onerror="this.remove()"></div><p class="loc">📍 Mbarizwa kandi nkorera muri Kamonyi District, Rwanda.</p></div>
     <p class="hi">Muraho, nitwa</p>
     <h1>Mwiseneza Janvier</h1>
     <h2>Web Developer wubaka imbuga zigezweho kandi zikora neza</h2>
@@ -76,40 +102,42 @@ footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
 
 <main>
 <section id="ubumenyi">
-  <h2>Ubumenyi bwanjye</h2>
-  <p class="s">Ibikoresho nkoresha buri munsi mu kubaka imbuga.</p>
-  <div class="grid">
-    <article class="card"><h3>HTML</h3><p>Imiterere y’urupapuro isobanutse, yoroshye gusomwa na Google n’abafite ubumuga.</p><div class="bar"><i style="width:95%"></i></div></article>
-    <article class="card"><h3>CSS</h3><p>Imitako, animations, grid na flexbox, n’imiterere ikora kuri telefoni zose.</p><div class="bar"><i style="width:90%"></i></div></article>
-    <article class="card"><h3>JavaScript</h3><p>Imikorere ikora ako kanya, kuva ku mpapuro zisanzwe kugeza kuri 3D na Three.js.</p><div class="bar"><i style="width:85%"></i></div></article>
-    <article class="card"><h3>Firebase</h3><p>Firestore, Authentication na Hosting mu kubika amakuru no gushyira imbuga kuri interineti.</p><div class="bar"><i style="width:80%"></i></div></article>
-  </div>
+  <h2>Ubumenyi n’Ubushobozi mfite</h2>
+  <p class="s">Ibyo nkora n’ibyo nshoboye.</p>
+  <div class="lw"><div class="lk"><div class="grid"><article class="card"><span class="big" aria-hidden="true">💡</span><h3>Guhanga udushya no gutegura imishinga itandukanye</h3></article><article class="card"><span class="big" aria-hidden="true">🌐</span><h3>Kubaka no gukora imbuga za internet</h3></article><article class="card"><span class="big" aria-hidden="true">🎬</span><h3>Gutunganya no kunoza amashusho (Video Editing)</h3></article><article class="card"><span class="big" aria-hidden="true">📊</span><h3>Gukora ubushakashatsi ku isoko (Marketing Research)</h3></article><article class="card"><span class="big" aria-hidden="true">🎓</span><h3>Kwigisha no gusangiza abandi ubumenyi</h3></article><article class="card"><span class="big" aria-hidden="true">🎭</span><h3>Gukina filimi no kwitabira ibikorwa by’ikinamico</h3></article></div></div><div class="gate"><div><p>Iki gice gifunze.</p><button class="btn g" type="button" data-signin>Injira (Sign In) kugira ngo ubibone</button></div></div></div>
 </section>
 
 <section id="imishinga">
   <h2>Imishinga</h2>
-  <p class="s">Bimwe mu byo nakoze n’ibyo nkora ubu. Simbuza aya makarita n’imishinga yawe nyayo.</p>
+  <p class="s">Imishinga nyayo nakoze.</p>
   <div class="grid">
     <article class="card"><h3>Ishuri Online</h3><p>Urubuga rwo kwiga ku giti cyawe mu Rwanda, rufite ahantu ha 3D hitwa “Living Technology Tree” hakoresha Three.js.</p><div class="tags"><span>Three.js</span><span>JavaScript</span><span>3D</span></div></article>
-    <article class="card"><h3>Portfolio yanjye</h3><p>Uru rubuga ubwarwo: dosiye imwe ya HTML, ifite 3D animations na Firestore yakira ubutumwa.</p><div class="tags"><span>HTML</span><span>CSS</span><span>Firebase</span></div></article>
-    <article class="card"><h3>Umushinga wawe hano</h3><p>Andika izina ry’umushinga, icyo ukora, n’ikoranabuhanga ryakoreshejwe. Shyiramo link ya demo cyangwa GitHub.</p><div class="tags"><span>Ikoranabuhanga</span></div></article>
+    <article class="card"><h3>Portfolio yanjye</h3><p>Uru rubuga: dosiye imwe ya HTML ifite 3D animations, Firebase Authentication na Firestore.</p><div class="tags"><span>HTML</span><span>CSS</span><span>Firebase</span></div></article>
   </div>
 </section>
 
 <section id="andika">
   <h2>Nyandikire</h2>
   <p class="s">Ufite umushinga cyangwa ikibazo? Ohereza ubutumwa, nzagusubiza vuba.</p>
-  <form id="f" novalidate>
+  <div class="lw"><div class="lk"><form id="f" novalidate>
     <label for="n">Izina</label><input id="n" name="name" maxlength="80" autocomplete="name" required>
     <label for="e">Imeyili</label><input id="e" name="email" type="email" maxlength="120" autocomplete="email" required>
     <label for="m">Ubutumwa</label><textarea id="m" name="message" maxlength="2000" required></textarea>
     <button class="btn g" id="b" type="submit">Ohereza</button>
     <p id="st" role="status" aria-live="polite"></p>
-  </form>
+  </form></div><div class="gate"><div><p>Iki gice gifunze.</p><button class="btn g" type="button" data-signin>Injira (Sign In) kugira ngo ubibone</button></div></div></div>
 </section>
 </main>
-<footer>© <span id="y"></span> Mwiseneza Janvier. Byubatswe na HTML, CSS, Three.js na Firebase.</footer>
+<footer><div class="soc"><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" ><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://wa.me" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" ><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>© <span id="y"></span> Mwiseneza Janvier. Byubatswe na HTML, CSS, Three.js na Firebase.</footer>
 
+<dialog id="dlg"><h3 id="dt">Injira</h3>
+<button class="gb" id="gg" type="button">Injira ukoresheje Google</button>
+<form id="af" novalidate><label for="ae1">Imeyili</label><input id="ae1" type="email" autocomplete="email" required>
+<label for="ap">Ijambo ry’ibanga</label><input id="ap" type="password" minlength="6" autocomplete="current-password" required>
+<button class="btn g" id="ab" type="submit">Injira</button></form>
+<p id="ae" role="alert"></p>
+<button class="lnk" id="sw" type="button">Nta konti ufite? Fungura nshya</button>
+<button class="lnk" id="cl" type="button" style="float:right">Funga</button></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 // ---------- 3D hero object ----------
@@ -154,7 +182,7 @@ footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
 })();
 
 // ---------- 3D tilt cards ----------
-document.querySelectorAll('.card').forEach(c=>{
+document.querySelectorAll('.card,.ph,.soc a').forEach(c=>{
   c.addEventListener('pointermove',e=>{
     if(e.pointerType==='touch')return;
     const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
@@ -169,6 +197,7 @@ document.getElementById('y').textContent=new Date().getFullYear();
 <script type="module">
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {getFirestore,collection,addDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {getAnalytics,isSupported} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 
 const firebaseConfig = {
@@ -184,19 +213,44 @@ const app=initializeApp(firebaseConfig);
 const db=getFirestore(app);
 isSupported().then(ok=>{if(ok)getAnalytics(app)}).catch(()=>{});
 
-const f=document.getElementById('f'),st=document.getElementById('st'),b=document.getElementById('b');
+const auth=getAuth(app);
+const $=id=>document.getElementById(id);
+const f=$('f'),st=$('st'),b=$('b'),n=$('n'),e1=$('e'),m=$('m'),dlg=$('dlg'),ae=$('ae'),authBtn=$('authBtn');
+let user=null,up=false;
 const say=(t,c)=>{st.textContent=t;st.className=c||''};
-f.addEventListener('submit',async e=>{
-  e.preventDefault();
-  const name=f.name.value.trim(),email=f.email.value.trim(),message=f.message.value.trim();
+const err=c=>({'auth/invalid-credential':'Imeyili cyangwa ijambo ry’ibanga si byo.','auth/email-already-in-use':'Iyi meyili isanzwe ifite konti. Injira.','auth/weak-password':'Ijambo ry’ibanga rigomba kuba rifite nibura inyuguti 6.','auth/invalid-email':'Imeyili si yo.','auth/popup-closed-by-user':'Idirishya rya Google rirafunzwe.','auth/unauthorized-domain':'Uru rubuga ntiruremererwa muri Firebase (Authorized domains).','auth/operation-not-allowed':'Ubu buryo bwo kwinjira ntiburafungurwa muri Firebase Console.'}[c]||'Ntibyakunze. Ongera ugerageze.');
+const open=()=>{ae.textContent='';dlg.showModal()};
+document.querySelectorAll('[data-signin]').forEach(x=>x.addEventListener('click',open));
+authBtn.addEventListener('click',()=>user?signOut(auth):open());
+$('cl').addEventListener('click',()=>dlg.close());
+$('sw').addEventListener('click',()=>{up=!up;$('dt').textContent=up?'Fungura konti':'Injira';$('ab').textContent=up?'Fungura konti':'Injira';$('sw').textContent=up?'Ufite konti? Injira':'Nta konti ufite? Fungura nshya';ae.textContent=''});
+$('gg').addEventListener('click',()=>signInWithPopup(auth,new GoogleAuthProvider()).then(()=>dlg.close()).catch(x=>ae.textContent=err(x.code)));
+$('af').addEventListener('submit',async ev=>{
+  ev.preventDefault();ae.textContent='';
+  try{
+    const a=$('ae1').value.trim(),p=$('ap').value;
+    await (up?createUserWithEmailAndPassword:signInWithEmailAndPassword)(auth,a,p);
+    $('af').reset();dlg.close();
+  }catch(x){ae.textContent=err(x.code)}
+});
+onAuthStateChanged(auth,u=>{
+  user=u;document.body.classList.toggle('authed',!!u);
+  document.querySelectorAll('.lk').forEach(x=>x.inert=!u);
+  authBtn.textContent=u?'Sohoka':'Injira';
+  if(u){n.value=u.displayName||(u.email||'').split('@')[0];e1.value=u.email||''}else{f.reset()}
+});
+f.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  if(!user)return open();
+  const name=n.value.trim(),email=e1.value.trim(),message=m.value.trim();
   if(!name||!message)return say('Uzuza izina n’ubutumwa.','er');
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return say('Andika imeyili yemewe.','er');
   b.disabled=true;say('Birimo koherezwa…');
   try{
-    await addDoc(collection(db,'messages'),{name,email,message,createdAt:serverTimestamp()});
-    f.reset();say('Murakoze! Ubutumwa bwawe bwoherejwe.','ok');
-  }catch(err){
-    console.error(err);say('Ntibyakunze koherezwa. Ongera ugerageze nyuma gato.','er');
+    await addDoc(collection(db,'messages'),{name,email,message,uid:user.uid,createdAt:serverTimestamp()});
+    m.value='';say('Murakoze! Ubutumwa bwawe bwoherejwe.','ok');
+  }catch(x){
+    console.error(x);say('Ntibyakunze koherezwa. Ongera ugerageze nyuma gato.','er');
   }finally{b.disabled=false}
 });
 </script>
