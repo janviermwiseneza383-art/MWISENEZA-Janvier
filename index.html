@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mwiseneza Janvier – Web Developer</title>
+<meta name="description" content="Mwiseneza Janvier, Web Developer ukorera i Musanze, mu Rwanda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#040814;--navy:#0b1633;--blue:#3a74ff;--sky:#7fa6ff;--gold:#f5c04a;--gold2:#ffdf8f;--tx:#e9eefb;--mut:#93a0bf;--glass:rgba(255,255,255,.055);--line:rgba(255,255,255,.13)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse 80% 50% at 15% 0%,#102259 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 100% 60%,#1a1535 0%,transparent 70%),var(--bg);color:var(--tx);font-family:Manrope,system-ui,"Segoe UI",sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;line-height:1.1}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main,header,footer{position:relative;z-index:1}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;backdrop-filter:blur(14px);background:rgba(4,8,20,.55);border-bottom:1px solid var(--line)}
+nav b{font-family:Syne,sans-serif;color:var(--gold);font-size:1.1rem}
+nav div{display:flex;gap:clamp(12px,3vw,28px);font-size:.95rem}
+nav a{text-decoration:none;color:var(--mut);transition:color .2s}
+nav a:hover{color:var(--gold2)}
+.hero{min-height:92vh;display:flex;align-items:center;padding:0 5vw}
+.hero .in{max-width:560px}
+.hero p.hi{color:var(--sky);font-weight:600;margin-bottom:10px}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;background:linear-gradient(100deg,var(--gold2),var(--gold) 55%,#e39b1d);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.hero h2{font-size:clamp(1.1rem,3vw,1.5rem);font-weight:600;color:var(--tx);margin-bottom:16px}
+.hero p.d{color:var(--mut);max-width:46ch;margin-bottom:28px}
+.btn{display:inline-block;border:0;cursor:pointer;font:600 1rem Manrope,sans-serif;padding:13px 26px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn.g{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1203;box-shadow:0 0 28px rgba(245,192,74,.35)}
+.btn.o{border:1px solid var(--line);background:var(--glass);margin-left:10px;color:var(--tx)}
+.btn:hover{transform:translateY(-3px)}
+section{padding:90px 5vw 20px;max-width:1180px;margin:auto}
+section>h2{font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:8px}
+section>p.s{color:var(--mut);margin-bottom:34px;max-width:52ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;perspective:1000px}
+.card{--mx:50%;--my:50%;position:relative;padding:26px;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 20px 50px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12);transform-style:preserve-3d;transition:transform .15s ease-out,border-color .3s;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle 180px at var(--mx) var(--my),rgba(245,192,74,.22),transparent 70%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:rgba(245,192,74,.5)}
+.card:hover::before{opacity:1}
+.card>*{transform:translateZ(30px)}
+.card h3{font-size:1.35rem;margin-bottom:8px;color:var(--gold2)}
+.card p{color:var(--mut);font-size:.95rem}
+.bar{height:6px;border-radius:9px;background:rgba(255,255,255,.1);margin-top:18px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--blue),var(--gold))}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{font-size:.78rem;padding:4px 11px;border-radius:99px;border:1px solid var(--line);color:var(--sky)}
+form{max-width:640px;padding:30px;border-radius:24px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 0 60px rgba(58,116,255,.14)}
+label{display:block;font-weight:600;font-size:.92rem;margin:0 0 6px}
+input,textarea{width:100%;padding:13px 15px;margin-bottom:18px;border-radius:12px;border:1px solid var(--line);background:rgba(4,8,20,.65);color:var(--tx);font:inherit}
+input:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,192,74,.18)}
+textarea{min-height:130px;resize:vertical}
+#st{margin-top:14px;font-weight:600;min-height:1.5em}
+#st.ok{color:#6ee7a8}#st.er{color:#ff8a8a}
+footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
+@media(max-width:640px){.hero{align-items:flex-end;padding-bottom:9vh}.btn.o{margin:10px 0 0}nav div a:nth-child(n+4){display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<nav><b>MJ</b><div><a href="#ahabanza">Ahabanza</a><a href="#ubumenyi">Ubumenyi</a><a href="#imishinga">Imishinga</a><a href="#andika">Nyandikire</a></div></nav>
+
+<header class="hero" id="ahabanza">
+  <div class="in">
+    <p class="hi">Muraho, nitwa</p>
+    <h1>Mwiseneza Janvier</h1>
+    <h2>Web Developer wubaka imbuga zigezweho kandi zikora neza</h2>
+    <p class="d">Nkora imbuga za interineti zihuta, zifite ishusho nziza, n’imikorere ishimisha uzikoresha, kuva kuri telefoni kugeza kuri mudasobwa.</p>
+    <a class="btn g" href="#andika">Nyandikire</a><a class="btn o" href="#imishinga">Reba imishinga</a>
+  </div>
+</header>
+
+<main>
+<section id="ubumenyi">
+  <h2>Ubumenyi bwanjye</h2>
+  <p class="s">Ibikoresho nkoresha buri munsi mu kubaka imbuga.</p>
+  <div class="grid">
+    <article class="card"><h3>HTML</h3><p>Imiterere y’urupapuro isobanutse, yoroshye gusomwa na Google n’abafite ubumuga.</p><div class="bar"><i style="width:95%"></i></div></article>
+    <article class="card"><h3>CSS</h3><p>Imitako, animations, grid na flexbox, n’imiterere ikora kuri telefoni zose.</p><div class="bar"><i style="width:90%"></i></div></article>
+    <article class="card"><h3>JavaScript</h3><p>Imikorere ikora ako kanya, kuva ku mpapuro zisanzwe kugeza kuri 3D na Three.js.</p><div class="bar"><i style="width:85%"></i></div></article>
+    <article class="card"><h3>Firebase</h3><p>Firestore, Authentication na Hosting mu kubika amakuru no gushyira imbuga kuri interineti.</p><div class="bar"><i style="width:80%"></i></div></article>
+  </div>
+</section>
+
+<section id="imishinga">
+  <h2>Imishinga</h2>
+  <p class="s">Bimwe mu byo nakoze n’ibyo nkora ubu. Simbuza aya makarita n’imishinga yawe nyayo.</p>
+  <div class="grid">
+    <article class="card"><h3>Ishuri Online</h3><p>Urubuga rwo kwiga ku giti cyawe mu Rwanda, rufite ahantu ha 3D hitwa “Living Technology Tree” hakoresha Three.js.</p><div class="tags"><span>Three.js</span><span>JavaScript</span><span>3D</span></div></article>
+    <article class="card"><h3>Portfolio yanjye</h3><p>Uru rubuga ubwarwo: dosiye imwe ya HTML, ifite 3D animations na Firestore yakira ubutumwa.</p><div class="tags"><span>HTML</span><span>CSS</span><span>Firebase</span></div></article>
+    <article class="card"><h3>Umushinga wawe hano</h3><p>Andika izina ry’umushinga, icyo ukora, n’ikoranabuhanga ryakoreshejwe. Shyiramo link ya demo cyangwa GitHub.</p><div class="tags"><span>Ikoranabuhanga</span></div></article>
+  </div>
+</section>
+
+<section id="andika">
+  <h2>Nyandikire</h2>
+  <p class="s">Ufite umushinga cyangwa ikibazo? Ohereza ubutumwa, nzagusubiza vuba.</p>
+  <form id="f" novalidate>
+    <label for="n">Izina</label><input id="n" name="name" maxlength="80" autocomplete="name" required>
+    <label for="e">Imeyili</label><input id="e" name="email" type="email" maxlength="120" autocomplete="email" required>
+    <label for="m">Ubutumwa</label><textarea id="m" name="message" maxlength="2000" required></textarea>
+    <button class="btn g" id="b" type="submit">Ohereza</button>
+    <p id="st" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+<footer>© <span id="y"></span> Mwiseneza Janvier. Byubatswe na HTML, CSS, Three.js na Firebase.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ---------- 3D hero object ----------
+(function(){
+  const cv=document.getElementById('bg');
+  const R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+  R.setPixelRatio(Math.min(devicePixelRatio,2));
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(50,1,.1,100);C.position.z=8;
+  const g=new THREE.Group();S.add(g);
+  const ico=new THREE.Mesh(new THREE.IcosahedronGeometry(2,1),new THREE.MeshBasicMaterial({color:0xf5c04a,wireframe:true,transparent:true,opacity:.85}));
+  const core=new THREE.Mesh(new THREE.OctahedronGeometry(1.1,0),new THREE.MeshStandardMaterial({color:0x3a74ff,metalness:.7,roughness:.25,emissive:0x0c2a9c,emissiveIntensity:.8}));
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(2.9,.025,8,120),new THREE.MeshBasicMaterial({color:0x7fa6ff}));
+  const ring2=ring.clone();ring2.scale.set(.82,.82,.82);
+  g.add(ico,core,ring,ring2);
+  S.add(new THREE.AmbientLight(0xffffff,.55));
+  const pl=new THREE.PointLight(0xf5c04a,2.4,30);pl.position.set(4,3,6);S.add(pl);
+  const pb=new THREE.PointLight(0x3a74ff,2.2,30);pb.position.set(-5,-3,4);S.add(pb);
+  const N=500,pos=new Float32Array(N*3);
+  for(let i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*26;
+  const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xf5c04a,size:.04,transparent:true,opacity:.6}));S.add(pts);
+  let mx=0,my=0,bx=0,by=0,sc=1;
+  function size(){
+    const w=innerWidth,h=innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();
+    const wide=w>820;bx=wide?2.9:0;by=wide?0:2.2;sc=wide?1:.62;g.scale.setScalar(sc);
+  }
+  addEventListener('resize',size);size();
+  addEventListener('pointermove',e=>{mx=e.clientX/innerWidth*2-1;my=e.clientY/innerHeight*2-1},{passive:true});
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function tick(t){
+    t*=.001;
+    g.rotation.y+=(mx*1.1-g.rotation.y)*.05;
+    g.rotation.x+=(my*.8-g.rotation.x)*.05;
+    g.position.x+=(bx+mx*.4-g.position.x)*.05;
+    g.position.y=by+Math.sin(t*1.2)*.18-my*.3;
+    if(!still){ico.rotation.z=t*.25;ico.rotation.y=t*.18;core.rotation.x=t*.6;core.rotation.y=t*.4;ring.rotation.x=t*.35;ring2.rotation.y=t*.5;pts.rotation.y=t*.02}
+    // scroll: fade the object as the user moves down
+    const k=Math.max(0,1-scrollY/(innerHeight*1.1));g.visible=k>.02;ico.material.opacity=.85*k;
+    R.render(S,C);requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+
+// ---------- 3D tilt cards ----------
+document.querySelectorAll('.card').forEach(c=>{
+  c.addEventListener('pointermove',e=>{
+    if(e.pointerType==='touch')return;
+    const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    c.style.transform=`rotateY(${(x-.5)*20}deg) rotateX(${(.5-y)*20}deg) translateZ(14px)`;
+    c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');
+  });
+  c.addEventListener('pointerleave',()=>{c.style.transform=''});
+});
+document.getElementById('y').textContent=new Date().getFullYear();
+</script>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getFirestore,collection,addDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {getAnalytics,isSupported} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC8rAn2H6_eetBKW3eaf3P2E0NrrZ2gGL0",
+  authDomain: "mwiseneza-portfolio.firebaseapp.com",
+  projectId: "mwiseneza-portfolio",
+  storageBucket: "mwiseneza-portfolio.firebasestorage.app",
+  messagingSenderId: "678040515485",
+  appId: "1:678040515485:web:5cb285e6d26ef50a8f3574",
+  measurementId: "G-JKZCLPG2C1"
+};
+const app=initializeApp(firebaseConfig);
+const db=getFirestore(app);
+isSupported().then(ok=>{if(ok)getAnalytics(app)}).catch(()=>{});
+
+const f=document.getElementById('f'),st=document.getElementById('st'),b=document.getElementById('b');
+const say=(t,c)=>{st.textContent=t;st.className=c||''};
+f.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const name=f.name.value.trim(),email=f.email.value.trim(),message=f.message.value.trim();
+  if(!name||!message)return say('Uzuza izina n’ubutumwa.','er');
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))return say('Andika imeyili yemewe.','er');
+  b.disabled=true;say('Birimo koherezwa…');
+  try{
+    await addDoc(collection(db,'messages'),{name,email,message,createdAt:serverTimestamp()});
+    f.reset();say('Murakoze! Ubutumwa bwawe bwoherejwe.','ok');
+  }catch(err){
+    console.error(err);say('Ntibyakunze koherezwa. Ongera ugerageze nyuma gato.','er');
+  }finally{b.disabled=false}
+});
+</script>
+</body>
+</html>
