@@ -42,6 +42,7 @@ nav a:hover{color:var(--gold2)}
 .btn.g{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1203;box-shadow:0 0 28px rgba(245,192,74,.35)}
 .btn.o{border:1px solid var(--line);background:var(--glass);margin-left:10px;color:var(--tx)}
 .btn:hover{transform:translateY(-3px)}
+.btn:disabled{opacity:.7;cursor:wait;transform:none}
 section{padding:90px 5vw 20px;max-width:1180px;margin:auto}
 section>h2{font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:8px}
 section>p.s{color:var(--mut);margin-bottom:34px;max-width:52ch}
@@ -58,8 +59,10 @@ label{display:block;font-weight:600;font-size:.92rem;margin:0 0 6px}
 input,textarea{width:100%;padding:13px 15px;margin-bottom:18px;border-radius:12px;border:1px solid var(--line);background:rgba(4,8,20,.65);color:var(--tx);font:inherit}
 input:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,192,74,.18)}
 textarea{min-height:130px;resize:vertical}
-#st{margin-top:14px;font-weight:600;min-height:1.5em}
-#st.ok{color:#6ee7a8}#st.er{color:#ff8a8a}
+#st{margin-top:16px;font-weight:600;border-radius:14px}
+#st:empty{display:none}
+#st.ok{background:rgba(110,231,168,0.15);border:1px solid #6ee7a8;color:#6ee7a8;padding:14px 18px;border-radius:14px;margin-top:16px;font-weight:600}
+#st.er{background:rgba(255,138,138,0.12);border:1px solid #ff8a8a;color:#ff8a8a;padding:14px 18px}
 .me{display:flex;align-items:center;gap:18px;margin-bottom:22px;perspective:800px;flex-wrap:wrap}
 .ph{position:relative;width:132px;height:132px;flex:none;border-radius:50%;box-shadow:0 0 34px rgba(245,192,74,.45),0 0 80px rgba(58,116,255,.4),0 16px 30px rgba(0,0,0,.5);transition:transform .15s ease-out}
 .ph::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--gold),var(--blue),var(--gold2),var(--blue),var(--gold));animation:spin 7s linear infinite}
@@ -217,7 +220,7 @@ gate_t:"Iki gice gifunze.",gate_b:"Injira (Sign In) kugira ngo ubibone",pr_title
 ct_title:"Nyandikire",ct_sub:"Ufite umushinga cyangwa ikibazo? Ohereza ubutumwa, nzagusubiza vuba.",lb_n:"Izina",lb_e:"Imeyili",lb_m:"Ubutumwa",send:"Ohereza",call:"Cyangwa umpamagare:",
 dt_in:"Injira",dt_up:"Fungura konti",google:"Injira ukoresheje Google",pw:"Ijambo ry’ibanga",sw_up:"Nta konti ufite? Fungura nshya",sw_in:"Ufite konti? Injira",close:"Funga",
 e_cred:"Imeyili cyangwa ijambo ry’ibanga si byo.",e_used:"Iyi meyili isanzwe ifite konti. Injira.",e_weak:"Ijambo ry’ibanga rigomba kuba rifite nibura inyuguti 6.",e_mail:"Imeyili si yo.",e_popup:"Idirishya rya Google rirafunzwe.",e_domain:"Uru rubuga ntiruremererwa muri Firebase (Authorized domains).",e_op:"Ubu buryo bwo kwinjira ntiburafungurwa muri Firebase Console.",e_gen:"Ntibyakunze. Ongera ugerageze.",
-st_fill:"Uzuza izina n’ubutumwa.",st_mail:"Andika imeyili yemewe.",st_send:"Birimo koherezwa…",st_ok:"Murakoze! Ubutumwa bwawe bwoherejwe.",st_fail:"Ntibyakunze koherezwa. Ongera ugerageze nyuma gato."},
+st_fill:"Uzuza izina n’ubutumwa.",st_mail:"Andika imeyili yemewe.",st_send:"Birimo koherezwa...",st_ok:"✅ Murakoze! Ubutumwa bwawe bwoherejwe neza kuri <span translate='no' class='notranslate'>MWISENEZA Janvier</span>.",st_fail:"Ntibyakunze koherezwa. Ongera ugerageze nyuma gato."},
 en:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, a Web Developer based in Kamonyi District, Rwanda.",nav_home:"Home",nav_skills:"Skills",nav_projects:"Projects",nav_contact:"Contact",signin:"Sign In",signout:"Sign Out",lang_l:"Language",lang_s:"Lang",more:"Tap for details →",need:"Sign In to see the detailed description of this service.",d1:"I come up with new ideas and turn them into clear projects with goals, a plan and the steps needed to deliver them, from the first idea to the final result.",d2:"I design and build fast websites that work on phones and computers, using HTML, CSS, JavaScript and Firebase, from the first design to going live.",d3:"I edit videos: arranging and cutting clips, and improving sound and colour so the message reaches viewers clearly.",d4:"I research the market: understanding customers, their needs and the competition, so products and services are planned with real information.",d5:"I enjoy teaching and sharing what I know, explaining things simply and helping others grow their own skills.",d6:"I act in films and take part in theatre, using voice, body and emotion to bring stories to an audience.",alt:"Photo of MWISENEZA Janvier",
 loc:"📍 I am a student at <span translate='no' class='notranslate'>TTC Muhanga</span>, residing in <span translate='no' class='notranslate'>Kamonyi</span> District, Rwanda.",hi:"Hello, I’m",role:"A Web Developer who builds modern websites that work well",intro:"I build fast, good-looking websites with an experience users enjoy, from phones to desktop computers.",cta1:"Contact me",cta2:"See projects",
 sk_title:"My Skills and Abilities",sk_sub:"What I do and what I am capable of.",s1:"Innovation and planning of different projects",s2:"Building and developing websites",s3:"Video editing and enhancement",s4:"Marketing research",s5:"Teaching and sharing knowledge with others",s6:"Acting in films and taking part in theatre",
@@ -225,6 +228,115 @@ gate_t:"This section is locked.",gate_b:"Sign In to view it",pr_title:"Projects"
 ct_title:"Contact me",ct_sub:"Have a project or a question? Send a message and I will reply soon.",lb_n:"Name",lb_e:"Email",lb_m:"Message",send:"Send",call:"Or call me:",
 dt_in:"Sign In",dt_up:"Create account",google:"Sign in with Google",pw:"Password",sw_up:"No account? Create one",sw_in:"Have an account? Sign in",close:"Close",
 e_cred:"Incorrect email or password.",e_used:"This email already has an account. Sign in instead.",e_weak:"The password must have at least 6 characters.",e_mail:"The email address is not valid.",e_popup:"The Google window was closed.",e_domain:"This site is not allowed in Firebase (Authorized domains).",e_op:"This sign-in method is not enabled in the Firebase Console.",e_gen:"Something went wrong. Please try again.",
-st_fill:"Please fill in your name and message.",st_mail:"Enter a valid email address.",st_send:"Sending…",st_ok:"Thank you! Your message has been sent.",st_fail:"Could not send your message. Please try again shortly."},
+st_fill:"Please fill in your name and message.",st_mail:"Enter a valid email address.",st_send:"Sending...",st_ok:"✅ Thank you! Your message has been successfully sent to <span translate='no' class='notranslate'>MWISENEZA Janvier</span>.",st_fail:"Could not send your message. Please try again shortly."},
 fr:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, développeur web basé dans le district de Kamonyi, au Rwanda.",nav_home:"Accueil",nav_skills:"Compétences",nav_projects:"Projets",nav_contact:"Contact",signin:"Connexion",signout:"Déconnexion",lang_l:"Langue",lang_s:"Langue",more:"Voir les détails →",need:"Connectez-vous pour voir la description détaillée de ce service.",d1:"J’imagine de nouvelles idées et je les transforme en projets clairs, avec des objectifs, un plan et les étapes pour les réaliser, de l’idée au résultat final.",d2:"Je conçois et développe des sites rapides qui fonctionnent sur téléphone et ordinateur, avec HTML, CSS, JavaScript et Firebase, du design à la mise en ligne.",d3:"Je monte des vidéos : assemblage et découpe des plans, amélioration du son et des couleurs pour que le message soit clair.",d4:"Je réalise des études de marché : comprendre les clients, leurs besoins et la concurrence, pour décider à partir d’informations concrètes.",d5:"J’aime enseigner et partager ce que je sais, en expliquant simplement et en aidant les autres à progresser.",d6:"Je joue dans des films et participe à des pièces de théâtre, en utilisant la voix, le corps et l’émotion pour raconter des histoires.",alt:"Photo de MWISENEZA Janvier",
-loc:"📍 Je suis étudiant à <span translate='no' class='notranslate'>TTC
+loc:"📍 Je suis étudiant à <span translate='no' class='notranslate'>TTC Muhanga</span> et je réside dans le district de <span translate='no' class='notranslate'>Kamonyi</span>, au Rwanda.",hi:"Bonjour, je m’appelle",role:"Développeur web qui crée des sites modernes et performants",intro:"Je crée des sites web rapides, soignés et agréables à utiliser, du téléphone à l’ordinateur.",cta1:"Me contacter",cta2:"Voir les projets",
+sk_title:"Mes compétences et capacités",sk_sub:"Ce que je fais et ce que je sais faire.",s1:"Innovation et planification de projets variés",s2:"Création et développement de sites web",s3:"Montage et amélioration vidéo",s4:"Étude de marché",s5:"Enseigner et partager ses connaissances",s6:"Jouer dans des films et participer à des activités théâtrales",
+gate_t:"Cette section est verrouillée.",gate_b:"Connectez-vous pour y accéder",pr_title:"Projets",pr_sub:"Des projets réels que j’ai réalisés.",p1d:"Une plateforme d’apprentissage autonome pour le Rwanda, avec un environnement 3D appelé « Living Technology Tree », créé avec Three.js.",p2t:"Mon portfolio",p2d:"Ce site : un seul fichier HTML avec des animations 3D, Firebase Authentication et Firestore.",
+ct_title:"Me contacter",ct_sub:"Un projet ou une question ? Envoyez un message, je vous répondrai rapidement.",lb_n:"Nom",lb_e:"E-mail",lb_m:"Message",send:"Envoyer",call:"Ou appelez-moi :",
+dt_in:"Connexion",dt_up:"Créer un compte",google:"Se connecter avec Google",pw:"Mot de passe",sw_up:"Pas de compte ? Créez-en un",sw_in:"Déjà un compte ? Connectez-vous",close:"Fermer",
+e_cred:"E-mail ou mot de passe incorrect.",e_used:"Cet e-mail a déjà un compte. Connectez-vous.",e_weak:"Le mot de passe doit contenir au moins 6 caractères.",e_mail:"L’adresse e-mail n’est pas valide.",e_popup:"La fenêtre Google a été fermée.",e_domain:"Ce site n’est pas autorisé dans Firebase (Authorized domains).",e_op:"Cette méthode de connexion n’est pas activée dans la console Firebase.",e_gen:"Une erreur est survenue. Réessayez.",
+st_fill:"Veuillez remplir votre nom et votre message.",st_mail:"Saisissez une adresse e-mail valide.",st_send:"Envoi en cours...",st_ok:"✅ Merci ! Votre message a bien été envoyé à <span translate='no' class='notranslate'>MWISENEZA Janvier</span>.",st_fail:"Échec de l’envoi. Réessayez dans un instant."}
+};
+let lang='rw';
+try{const sv=localStorage.getItem('lang');if(L[sv])lang=sv}catch(e){}
+window.t=k=>(L[lang]&&L[lang][k])||L.rw[k]||k;
+function apply(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-t]').forEach(e=>{e.textContent=t(e.dataset.t)});
+  document.querySelectorAll('[data-h]').forEach(e=>{e.innerHTML=t(e.dataset.h)});
+  document.title=t('title');
+  document.querySelector('meta[name=description]').setAttribute('content',t('desc'));
+  const im=document.querySelector('.ph img');if(im)im.alt=t('alt');
+  document.querySelector('.lang').setAttribute('aria-label',t('lang_l'));
+  document.querySelectorAll('.lang button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.l===lang)));
+  dispatchEvent(new Event('langchange'));
+}
+document.querySelectorAll('.lang button').forEach(x=>x.addEventListener('click',()=>{lang=x.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}apply()}));
+apply();
+</script>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getFirestore,collection,addDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getAnalytics,isSupported} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC8rAn2H6_eetBKW3eaf3P2E0NrrZ2gGL0",
+  authDomain: "mwiseneza-portfolio.firebaseapp.com",
+  projectId: "mwiseneza-portfolio",
+  storageBucket: "mwiseneza-portfolio.firebasestorage.app",
+  messagingSenderId: "678040515485",
+  appId: "1:678040515485:web:5cb285e6d26ef50a8f3574",
+  measurementId: "G-JKZCLPG2C1"
+};
+const app=initializeApp(firebaseConfig);
+const db=getFirestore(app);
+isSupported().then(ok=>{if(ok)getAnalytics(app)}).catch(()=>{});
+
+const auth=getAuth(app);
+const $=id=>document.getElementById(id);
+const t=k=>window.t(k);
+const f=$('cf'),st=$('st'),b=$('b'),n=$('nm'),e1=$('em'),m=$('ms'),dlg=$('dlg'),ae=$('ae'),authBtn=$('authBtn');
+let user=null,up=false,pending=null,cur=null;
+const sdlg=$('sdlg'),dn=$('dn');
+let sk='';
+const say=(k,c)=>{sk=k;st.innerHTML=k?t(k):'';st.className=c||''};
+const ek={'auth/invalid-credential':'e_cred','auth/email-already-in-use':'e_used','auth/weak-password':'e_weak','auth/invalid-email':'e_mail','auth/popup-closed-by-user':'e_popup','auth/unauthorized-domain':'e_domain','auth/operation-not-allowed':'e_op'};
+const err=c=>t(ek[c]||'e_gen');
+const render=()=>{$('dt').textContent=t(up?'dt_up':'dt_in');$('ab').textContent=t(up?'dt_up':'dt_in');$('sw').textContent=t(up?'sw_in':'sw_up');authBtn.textContent=t(user?'signout':'signin')};
+addEventListener('langchange',()=>{ae.textContent='';st.innerHTML=sk?t(sk):'';if(b.disabled)b.textContent=t('st_send');render();if(sdlg.open&&cur){$('sdt').textContent=t('s'+cur);$('sdp').textContent=t('d'+cur)}});
+render();
+const showSkill=k=>{
+  const c=document.querySelector('.sk[data-sk="'+k+'"]');if(!c)return;
+  cur=k;const im=c.querySelector('.cimg');$('sic').hidden=!im;if(im)$('sic').src=im.src;
+  $('sdt').textContent=t('s'+k);$('sdp').textContent=t('d'+k);
+  if(!sdlg.open)sdlg.showModal();
+};
+const open=k=>{pending=k||null;dn.hidden=!pending;ae.textContent='';dlg.showModal()};
+dlg.addEventListener('close',()=>{if(!user)pending=null});
+document.querySelectorAll('.sk').forEach(c=>{
+  const go=()=>{const k=c.dataset.sk;user?showSkill(k):open(k)};
+  c.addEventListener('click',go);
+  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
+});
+$('scl').addEventListener('click',()=>sdlg.close());
+authBtn.addEventListener('click',()=>user?signOut(auth):open());
+$('cl').addEventListener('click',()=>dlg.close());
+$('sw').addEventListener('click',()=>{up=!up;ae.textContent='';render()});
+$('gg').addEventListener('click',()=>signInWithPopup(auth,new GoogleAuthProvider()).then(()=>dlg.close()).catch(x=>ae.textContent=err(x.code)));
+$('af').addEventListener('submit',async ev=>{
+  ev.preventDefault();ae.textContent='';
+  try{
+    const a=$('ae1').value.trim(),p=$('ap').value;
+    await (up?createUserWithEmailAndPassword:signInWithEmailAndPassword)(auth,a,p);
+    $('af').reset();dlg.close();
+  }catch(x){ae.textContent=err(x.code)}
+});
+onAuthStateChanged(auth,u=>{
+  const was=!!user;user=u;
+  render();
+  if(u&&pending){const k=pending;pending=null;if(dlg.open)dlg.close();showSkill(k)}
+  if(u){n.value=u.displayName||(u.email||'').split('@')[0];e1.value=u.email||''}else if(was){f.reset()}
+});
+f.addEventListener('submit',async ev=>{
+  ev.preventDefault();
+  if(b.disabled)return;
+  const name=n.value.trim(),email=e1.value.replace(/[\u200B-\u200D\uFEFF]/g,'').trim(),message=m.value.trim();
+  if(!name||!message)return say('st_fill','er');
+  if(!/^\S+@\S+\.\S+$/.test(email))return say('st_mail','er');
+  say('');b.disabled=true;b.textContent=t('st_send');
+  try{
+  const FS='https://formspree.io/f/mzerepkv';
+  const res=await Promise.allSettled([
+    addDoc(collection(db,'messages'),{name,email,message,uid:user?user.uid:null,createdAt:serverTimestamp()}),
+    fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message})}).then(r=>{if(!r.ok)throw new Error('Formspree '+r.status)})
+  ]);
+  res.forEach(r=>{if(r.status==='rejected')console.error(r.reason)});
+  if(res.some(r=>r.status==='fulfilled')){f.reset();say('st_ok','ok')}else{say('st_fail','er')}
+  }catch(x){console.error(x);say('st_fail','er')}finally{b.disabled=false;b.textContent=t('send')}
+});
+</script>
+</body>
+</html>
