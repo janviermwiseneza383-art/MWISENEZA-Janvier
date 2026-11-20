@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="rw">
+<html lang="rw" translate="no" class="notranslate">
 <head>
 <meta charset="utf-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title translate="no">MWISENEZA Janvier | Portfolio</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23040814'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='28' fill='%23f5c04a'%3EMJ%3C/text%3E%3C/svg%3E">
@@ -42,7 +43,6 @@ nav a:hover{color:var(--gold2)}
 .btn.g{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1203;box-shadow:0 0 28px rgba(245,192,74,.35)}
 .btn.o{border:1px solid var(--line);background:var(--glass);margin-left:10px;color:var(--tx)}
 .btn:hover{transform:translateY(-3px)}
-.btn:disabled{opacity:.7;cursor:wait;transform:none}
 section{padding:90px 5vw 20px;max-width:1180px;margin:auto}
 section>h2{font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:8px}
 section>p.s{color:var(--mut);margin-bottom:34px;max-width:52ch}
@@ -64,15 +64,15 @@ textarea{min-height:130px;resize:vertical}
 #st.ok{background:rgba(110,231,168,0.15);border:1px solid #6ee7a8;color:#6ee7a8;padding:14px 18px;border-radius:14px;margin-top:16px;font-weight:600}
 #st.er{background:rgba(255,138,138,0.12);border:1px solid #ff8a8a;color:#ff8a8a;padding:14px 18px}
 .me{display:flex;align-items:center;gap:18px;margin-bottom:22px;perspective:800px;flex-wrap:wrap}
-.ph{position:relative;width:132px;height:132px;flex:none;border-radius:50%;box-shadow:0 0 34px rgba(245,192,74,.45),0 0 80px rgba(58,116,255,.4),0 16px 30px rgba(0,0,0,.5);transition:transform .15s ease-out}
+.ph{position:relative;width:132px;height:132px;flex:none;border-radius:50%;box-shadow:0 0 34px rgba(245,192,74,.45),0 0 80px rgba(58,116,255,.4),0 16px 30px rgba(0,0,0,.5);transition:transform .15s ease-out;cursor:zoom-in}
 .ph::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--gold),var(--blue),var(--gold2),var(--blue),var(--gold));animation:spin 7s linear infinite}
 .ph img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);border-radius:50%;object-fit:cover;background:var(--navy)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loc{color:var(--mut);font-size:.95rem;max-width:34ch}
 .cimg{display:block;width:100%;height:150px;object-fit:cover;border-radius:14px;margin-bottom:16px;border:1px solid rgba(245,192,74,0.35)}
 .cimg[hidden]{display:none}
-.sk{cursor:pointer}
-.sk:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.ck{cursor:pointer}
+.ck:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 .card .more{margin-top:12px;color:var(--gold);font-size:.85rem;font-weight:600}
 .dn{color:var(--gold2);font-weight:600;margin-bottom:14px}
 #sdlg{width:min(92vw,480px)}
@@ -94,6 +94,35 @@ dialog h3{font-size:1.5rem;margin-bottom:16px;color:var(--gold2)}
 .tel a:hover{transform:translateY(-2px);border-color:rgba(245,192,74,.55)}
 footer .tel{justify-content:center;margin:0 0 22px}
 footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
+.cimg.pimg{height:160px}
+div.pimg{display:grid;place-items:center;font-size:2.6rem;background:linear-gradient(135deg,rgba(58,116,255,.35),rgba(245,192,74,.3))}
+.fl{perspective:900px;animation:flt 6s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-8px)}}
+#hub{width:min(96vw,980px);max-height:92vh;overflow:auto;padding:26px;border-radius:28px;background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(58,116,255,.28),transparent 60%),radial-gradient(ellipse 60% 50% at 100% 100%,rgba(245,192,74,.16),transparent 60%),rgba(6,12,30,.97);box-shadow:0 0 90px rgba(58,116,255,.4),0 0 40px rgba(245,192,74,.15)}
+.hh{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.hh b{font-family:Syne,sans-serif;color:var(--gold);font-size:1.1rem}
+.hh>div{display:flex;gap:10px;flex-wrap:wrap}
+.hh .btn{padding:9px 18px;font-size:.9rem;margin:0}
+.hwide{grid-column:1/-1}
+.card .hu{color:var(--sky);font-weight:600;margin-bottom:8px}
+.card .hwt{font-family:Syne,system-ui,sans-serif;font-size:clamp(1.1rem,2.4vw,1.5rem);line-height:1.5;color:var(--tx)}
+.ha{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.ha .btn,.ha .btn.o{margin:0}
+.he{font-size:2rem;display:block;margin-bottom:10px}
+.cs{display:inline-block;margin-top:12px;padding:4px 12px;border-radius:99px;border:1px dashed rgba(245,192,74,.6);color:var(--gold);font-size:.8rem;font-weight:700}
+.ph:hover img{filter:brightness(1.1)}
+.zm{position:absolute;right:0;bottom:2px;z-index:2;width:30px;height:30px;border-radius:50%;background:rgba(4,8,20,.85);border:1px solid var(--gold);display:grid;place-items:center;font-size:.85rem}
+#photoDlg{width:auto;max-width:92vw;padding:0;background:transparent;border:0;box-shadow:none;overflow:visible}
+#photoDlg::backdrop{background:rgba(2,5,14,.86);backdrop-filter:blur(6px)}
+.pw{position:relative;display:inline-block;line-height:0}
+#photoBig{display:block;max-width:90vw;max-height:85vh;width:auto;height:auto;border-radius:20px;box-shadow:0 0 60px rgba(245,192,74,.45)}
+.px{position:absolute;top:12px;right:12px;padding:8px 16px;font-size:.85rem;line-height:1.2}
+#userBox{display:none;align-items:center;gap:8px}
+body.in #userBox{display:flex}
+body.in #authBtn{display:none}
+#so{margin:0;padding:8px 14px;font-size:.85rem}
+.av{width:34px;height:34px;flex:none;border-radius:50%;border:2px solid var(--gold);padding:0;overflow:hidden;background:var(--navy);color:var(--gold);font:800 .95rem Syne,sans-serif;display:grid;place-items:center;cursor:pointer;box-shadow:0 0 12px rgba(245,192,74,.4)}
+.av img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:640px){.hero{align-items:flex-end;padding-bottom:9vh}.btn.o{margin:10px 0 0}.links{display:none}.bf{display:none}.bs{display:inline}}
 @media(max-width:480px){.lt{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -101,43 +130,44 @@ footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
 </head>
 <body>
 <canvas id="bg" aria-hidden="true"></canvas>
-<nav><b translate="no" class="notranslate"><span class="bf">MWISENEZA Janvier</span><span class="bs">MJ</span></b><div class="links"><a href="#ahabanza" data-t="nav_home">Ahabanza</a><a href="#ubumenyi" data-t="nav_skills">Ubumenyi</a><a href="#imishinga" data-t="nav_projects">Imishinga</a><a href="#andika" data-t="nav_contact">Nyandikire</a></div><div class="nr"><div class="lb notranslate" translate="no"><span class="ll" aria-hidden="true">🌐 <span class="lt" data-t="lang_s">Ururimi</span>:</span><div class="lang" role="group" aria-label="Ururimi"><button type="button" data-l="rw" aria-pressed="true">RW</button><button type="button" data-l="en" aria-pressed="false">EN</button><button type="button" data-l="fr" aria-pressed="false">FR</button></div></div><button class="btn o" id="authBtn" type="button">Injira</button></div></nav>
+<nav><b translate="no" class="notranslate"><span class="bf">MWISENEZA Janvier</span><span class="bs">MJ</span></b><div class="links"><a href="#ahabanza" data-i18n="nav_home">Ahabanza</a><a href="#ubumenyi" data-i18n="nav_skills">Ubumenyi</a><a href="#imishinga" data-i18n="nav_projects">Imishinga</a><a href="#andika" data-i18n="nav_contact">Nyandikire</a></div><div class="nr"><div class="lb notranslate" translate="no"><span class="ll" aria-hidden="true">🌐 <span class="lt" data-i18n="lang_s">Ururimi</span>:</span><div class="lang" role="group" aria-label="Ururimi"><button type="button" data-l="rw" aria-pressed="true">RW</button><button type="button" data-l="en" aria-pressed="false">EN</button><button type="button" data-l="fr" aria-pressed="false">FR</button></div></div><button class="btn o" id="authBtn" type="button">Injira</button><div id="userBox"><button class="av" id="av" type="button"></button><button class="btn o" id="so" type="button" data-i18n="signout">Sohoka</button></div></div></nav>
 
 <header class="hero" id="ahabanza">
   <div class="in">
-    <div class="me"><div class="ph"><img translate="no" src="https://i.postimg.cc/kGT9sTHp/84A7500.jpg" alt="Ifoto ya MWISENEZA Janvier" onerror="this.remove()"></div><p class="loc" data-h="loc">📍 Ndi umunyeshuri wiga muri <span translate="no" class="notranslate">TTC Muhanga</span>, nkaba ntuye mu Karere ka <span translate="no" class="notranslate">Kamonyi</span>, mu Rwanda.</p></div>
-    <p class="hi" data-t="hi">Muraho, nitwa</p>
+    <div class="me"><div class="ph" role="button" tabindex="0" aria-label="Kuzuza ifoto"><img translate="no" src="https://i.postimg.cc/kGT9sTHp/84A7500.jpg" alt="Ifoto ya MWISENEZA Janvier" onerror="this.remove()"><span class="zm" aria-hidden="true">🔍</span></div><p class="loc" data-i18n-html="loc">📍 Ndi umunyeshuri wiga muri <span translate="no" class="notranslate">TTC Muhanga</span>, nkaba ntuye mu Karere ka <span translate="no" class="notranslate">Kamonyi</span>, mu Rwanda.</p></div>
+    <p class="hi" data-i18n="hi">Muraho, nitwa</p>
     <h1 translate="no" class="notranslate">MWISENEZA Janvier</h1>
-    <h2 data-t="role">Web Developer wubaka imbuga zigezweho kandi zikora neza</h2>
-    <p class="d" data-t="intro">Nkora imbuga za interineti zihuta, zifite ishusho nziza, n’imikorere ishimisha uzikoresha, kuva kuri telefoni kugeza kuri mudasobwa.</p>
-    <a class="btn g" href="#andika" data-t="cta1">Nyandikire</a><a class="btn o" href="#imishinga" data-t="cta2">Reba imishinga</a>
+    <h2 data-i18n="role">Web Developer wubaka imbuga zigezweho kandi zikora neza</h2>
+    <p class="d" data-i18n="intro">Nkora imbuga za interineti zihuta, zifite ishusho nziza, n’imikorere ishimisha uzikoresha, kuva kuri telefoni kugeza kuri mudasobwa.</p>
+    <a class="btn g" href="#andika" data-i18n="cta1">Nyandikire</a><a class="btn o" href="#imishinga" data-i18n="cta2">Reba imishinga</a>
   </div>
 </header>
 
 <main>
 <section id="ubumenyi">
-  <h2 data-t="sk_title">Ubumenyi n’Ubushobozi mfite</h2>
-  <p class="s" data-t="sk_sub">Ibyo nkora n’ibyo nshoboye.</p>
-  <div class="grid"><article class="card sk" role="button" tabindex="0" data-sk="1"><img class="cimg" src="https://i.postimg.cc/5tbzJF6S/innovation-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-t="s1">Guhanga udushya no gutegura imishinga itandukanye</h3><p class="more" data-t="more">Kanda urebe ibisobanuro →</p></article><article class="card sk" role="button" tabindex="0" data-sk="2"><img class="cimg" src="https://i.postimg.cc/63Thv1C7/website-development-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-t="s2">Kubaka no gukora imbuga za internet</h3><p class="more" data-t="more">Kanda urebe ibisobanuro →</p></article><article class="card sk" role="button" tabindex="0" data-sk="3"><img class="cimg" src="https://i.postimg.cc/vHGwWYg0/editing-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-t="s3">Gutunganya no kunoza amashusho (Video Editing)</h3><p class="more" data-t="more">Kanda urebe ibisobanuro →</p></article><article class="card sk" role="button" tabindex="0" data-sk="4"><img class="cimg" src="https://i.postimg.cc/fTdS0vd2/research-1.webp" alt="" loading="lazy" onerror="this.remove()"><h3 data-t="s4">Gukora ubushakashatsi ku isoko (Marketing Research)</h3><p class="more" data-t="more">Kanda urebe ibisobanuro →</p></article><article class="card sk" role="button" tabindex="0" data-sk="5"><img class="cimg" src="https://i.postimg.cc/fTdBCFp0/teaching-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-t="s5">Kwigisha no gusangiza abandi ubumenyi</h3><p class="more" data-t="more">Kanda urebe ibisobanuro →</p></article><article class="card sk" role="button" tabindex="0" data-sk="6"><img class="cimg" src="https://i.postimg.cc/ncXYS7Db/film-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-t="s6">Gukina filimi no kwitabira ibikorwa by’ikinamico</h3><p class="more" data-t="more">Kanda urebe ibisobanuro →</p></article></div>
+  <h2 data-i18n="sk_title">Ubumenyi n’Ubushobozi mfite</h2>
+  <p class="s" data-i18n="sk_sub">Ibyo nkora n’ibyo nshoboye.</p>
+  <div class="grid"><article class="card ck" role="button" tabindex="0" data-ck="s1" data-dk="d1"><img class="cimg" src="https://i.postimg.cc/5tbzJF6S/innovation-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s1">Guhanga udushya no gutegura imishinga itandukanye</h3><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s2" data-dk="d2"><img class="cimg" src="https://i.postimg.cc/63Thv1C7/website-development-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s2">Kubaka no gukora imbuga za internet</h3><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s3" data-dk="d3"><img class="cimg" src="https://i.postimg.cc/vHGwWYg0/editing-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s3">Gutunganya no kunoza amashusho (Video Editing)</h3><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s4" data-dk="d4"><img class="cimg" src="https://i.postimg.cc/fTdS0vd2/research-1.webp" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s4">Gukora ubushakashatsi ku isoko (Marketing Research)</h3><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s5" data-dk="d5"><img class="cimg" src="https://i.postimg.cc/fTdBCFp0/teaching-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s5">Kwigisha no gusangiza abandi ubumenyi</h3><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s6" data-dk="d6"><img class="cimg" src="https://i.postimg.cc/ncXYS7Db/film-1.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s6">Gukina filimi no kwitabira ibikorwa by’ikinamico</h3><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s7" data-dk="d7"><img class="cimg" src="https://i.postimg.cc/pdQfJvDC/Qualified-to-Drive-Categories-A-and-B.png" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s7">Gutwara ibinyabiziga (Category A & B Driving)</h3><p data-i18n="d7">Ubuhanga n’ubushobozi bwo gutwara moto n’imodoka (Category A & B) mu mutekano.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s8" data-dk="d8"><img class="cimg" src="https://i.postimg.cc/NMp0QCwJ/Aspiring-Football-Coach-Skills-Poster.png" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s8">Gutoza ikipe y’umupira w’amaguru (Football Coaching)</h3><p data-i18n="d8">Gutegura imyitozo, kuyobora abakinnyi no gutoza ikipe y’umupira w’amaguru.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s9" data-dk="d9"><img class="cimg" src="https://i.postimg.cc/vBNcW2Sx/Professional-Painting-Skills-Poster.png" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s9">Gusiga no gutera amarangi (Painting & Decorating)</h3><p data-i18n="d9">Gusiga amarangi neza no kunoza inyubako mu buryo bugezweho kandi bubereye ijisho.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s10" data-dk="d10"><img class="cimg" src="https://i.postimg.cc/tRFs1kNz/Judging-Predicting-Football-Analytics-Poster.png" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s10">Gusesengura no gutanga ibitego/amanota (Judging & Predicting)</h3><p data-i18n="d10">Gusesengura amarushanwa, gutanga amanota (Judging) no guhanura ibishobora kuba (Predicting) mu mikino n’ibikorwa.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article><article class="card ck" role="button" tabindex="0" data-ck="s11" data-dk="d11"><img class="cimg" src="https://i.postimg.cc/nhBRg64X/Researching-Information-Creating-Opportunities.png" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="s11">Gushakisha amakuru, amahirwe n’ibisubizo (Information & Opportunity Research)</h3><p data-i18n="d11">Mfite ubushobozi bwo gushakisha amakuru yimbitse, kumenya amahirwe mashya no kubona inzira zisubiza ibibazo mu buryo bwihuse kandi bunoze.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article></div>
 </section>
 
 <section id="imishinga">
-  <h2 data-t="pr_title">Imishinga</h2>
-  <p class="s" data-t="pr_sub">Imishinga nyayo nakoze.</p>
+  <h2 data-i18n="pr_title">Imishinga</h2>
+  <p class="s" data-i18n="pr_sub">Imishinga nyayo nakoze.</p>
   <div class="grid">
-    <article class="card"><h3>Ishuri Online</h3><p data-t="p1d">Urubuga rwo kwiga ku giti cyawe mu Rwanda, rufite ahantu ha 3D hitwa “Living Technology Tree” hakoresha Three.js.</p></article>
-    <article class="card"><h3 data-t="p2t">Portfolio yanjye</h3><p data-t="p2d">Uru rubuga: dosiye imwe ya HTML ifite 3D animations, Firebase Authentication na Firestore.</p></article>
+    <article class="card ck" role="button" tabindex="0" data-ck="p1t" data-dk="p1d"><!-- Shyiramo ifoto ya Ishuri Online hano usimbuze iki gisimbura: <img class="cimg pimg" src="LINK_Y_IFOTO" alt="" loading="lazy" onerror="this.remove()"> --><div class="cimg pimg" aria-hidden="true">📚</div><h3 data-i18n="p1t">Ishuri Online</h3><p data-i18n="p1d">Urubuga rwo kwiga no gusangira ubumenyi mu buryo bugezweho mu Rwanda.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article>
+    <article class="card ck" role="button" tabindex="0" data-ck="p2t" data-dk="p2d"><img class="cimg pimg" src="https://i.postimg.cc/kgmZrqPx/portfolio.jpg" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="p2t">Portfolio yanjye</h3><p data-i18n="p2d">Urubuga rwanjye bwite rwerekana ibyo nkora, ubumenyi mfite, n’uburyo bwo kunyandikira mu ndimi eshatu.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article>
+    <article class="card ck" role="button" tabindex="0" data-ck="p3t" data-dk="p3d"><img class="cimg pimg" src="https://i.postimg.cc/L5xvBSFT/Kigali-Update-Score-Sports-Badge.png" alt="" loading="lazy" onerror="this.remove()"><h3 data-i18n="p3t">Kigali Update Score</h3><p data-i18n="p3d">Urubuga rutanga amakuru agezweho n’ibitego by’imikino (Live Scores & Sports Updates) mu Rwanda no ku isi.</p><p class="more" data-i18n="more">Kanda urebe ibisobanuro →</p></article>
   </div>
 </section>
 
 <section id="andika">
-  <h2 data-t="ct_title">Nyandikire</h2>
-  <p class="s" data-t="ct_sub">Ufite umushinga cyangwa ikibazo? Ohereza ubutumwa, nzagusubiza vuba.</p>
+  <h2 data-i18n="ct_title">Nyandikire</h2>
+  <p class="s" data-i18n="ct_sub">Ufite umushinga cyangwa ikibazo? Ohereza ubutumwa, nzagusubiza vuba.</p>
   <form id="cf" novalidate>
-    <label for="nm" data-t="lb_n">Izina</label><input id="nm" name="name" maxlength="80" autocomplete="name" required>
-    <label for="em" data-t="lb_e">Imeyili</label><input id="em" name="email" type="email" maxlength="120" autocomplete="email" required>
-    <label for="ms" data-t="lb_m">Ubutumwa</label><textarea id="ms" name="message" maxlength="2000" required></textarea>
-    <button class="btn g" id="b" type="submit" data-t="send">Ohereza</button>
+    <label for="nm" data-i18n="lb_n">Izina</label><input id="nm" name="name" maxlength="80" autocomplete="name" required>
+    <label for="em" data-i18n="lb_e">Imeyili</label><input id="em" name="email" type="email" maxlength="120" autocomplete="email" required>
+    <label for="ms" data-i18n="lb_m">Ubutumwa</label><textarea id="ms" name="message" maxlength="2000" required></textarea>
+    <button class="btn g" id="b" type="submit" data-i18n="send">Ohereza</button>
     <p id="st" role="status" aria-live="polite"></p>
   </form>
 </section>
@@ -145,19 +175,29 @@ footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
 <footer><div class="soc"><a href="https://wa.me" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true" ><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/in/mwiseneza-janvier-b06438444/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true" ><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div><div class="tel"><a href="tel:+250792726183">📞 +250 792 726 183</a><a href="tel:+250735957277">📞 +250 735 957 277</a></div>© <span id="y"></span> <span translate="no" class="notranslate">MWISENEZA Janvier</span>.</footer>
 
 <dialog id="dlg"><h3 id="dt">Injira</h3>
-<p class="dn" id="dn" data-t="need" hidden>Injira (Sign In) kugira ngo ubone ibisobanuro birambuye by’iyi serivisi.</p>
-<button class="gb" id="gg" type="button" data-t="google">Injira ukoresheje Google</button>
-<form id="af" novalidate><label for="ae1" data-t="lb_e">Imeyili</label><input id="ae1" type="email" autocomplete="email" required>
-<label for="ap" data-t="pw">Ijambo ry’ibanga</label><input id="ap" type="password" minlength="6" autocomplete="current-password" required>
+<p class="dn" id="dn" data-i18n="need" hidden>Injira (Sign In) kugira ngo ubone ibisobanuro birambuye by’iyi serivisi.</p>
+<button class="gb" id="gg" type="button" data-i18n="google">Injira ukoresheje Google</button>
+<form id="af" novalidate><label for="ae1" data-i18n="lb_e">Imeyili</label><input id="ae1" type="email" autocomplete="email" required>
+<label for="ap" data-i18n="pw">Ijambo ry’ibanga</label><input id="ap" type="password" minlength="6" autocomplete="current-password" required>
 <button class="btn g" id="ab" type="submit">Injira</button></form>
 <p id="ae" role="alert"></p>
 <button class="lnk" id="sw" type="button">Nta konti ufite? Fungura nshya</button>
-<button class="lnk" id="cl" type="button" style="float:right" data-t="close">Funga</button></dialog>
-<dialog id="sdlg"><img class="cimg" id="sic" alt=""><h3 id="sdt"></h3><p id="sdp"></p><button class="btn g" id="scl" type="button" data-t="close">Funga</button></dialog>
+<button class="lnk" id="cl" type="button" style="float:right" data-i18n="close">Funga</button></dialog>
+<dialog id="sdlg"><img class="cimg" id="sic" alt=""><h3 id="sdt"></h3><p id="sdp"></p><button class="btn g" id="scl" type="button" data-i18n="close">Funga</button></dialog>
+<dialog id="photoDlg"><div class="pw"><img id="photoBig" alt=""><button class="btn g px" id="photoX" type="button" data-i18n="closex">✕ Funga</button></div></dialog>
+<dialog id="hub"><div class="hh"><b translate="no" class="notranslate">MWISENEZA Janvier</b><div><button class="btn o" id="hbk" type="button" data-i18n="hub_back">Subira ku rubuga</button><button class="btn g" id="hso" type="button" data-i18n="signout">Sohoka</button></div></div>
+<div class="grid hg">
+<div class="fl hwide"><article class="card hc"><p class="hwt" id="hw"></p></article></div>
+<div class="fl" style="animation-delay:-1s"><article class="card hc"><span class="he" aria-hidden="true">🎯</span><h3 data-i18n="c1t">Ubumenyi burambuye</h3><p data-i18n="c1d">Reba ubumenyi n’ubushobozi mfite n’ibisobanuro byabyo.</p><div class="ha"><button class="btn g" id="gosk" type="button" data-i18n="go_sk">Reba ubumenyi</button></div></article></div>
+<div class="fl" style="animation-delay:-3s"><article class="card hc"><span class="he" aria-hidden="true">🚀</span><h3 data-i18n="c2t">Imishinga yanjye</h3><p data-i18n="c2d">Reba imishinga nakoze.</p><div class="ha"><button class="btn g" id="gopr" type="button" data-i18n="cta2">Reba imishinga</button></div></article></div>
+<div class="fl" style="animation-delay:-5s"><article class="card hc"><span class="he" aria-hidden="true">💡</span><h3 data-i18n="c3t">Ibikorwa bishya</h3><p data-i18n="c3d">Imishinga, amasomo n’ibikorwa by’ikoranabuhanga biri gutegurwa.</p><span class="cs" data-i18n="cs">Bizaza vuba</span></article></div>
+<div class="fl" style="animation-delay:-2s"><article class="card hc"><span class="he" aria-hidden="true">⚽</span><h3 data-i18n="kg_t">Kigali Update Score</h3><p data-i18n="kg_d">Amakuru n’ibitego by’imikino bigezweho.</p><div class="ha"><button class="btn g" id="gokg" type="button" data-i18n="kg_b">Reba umushinga</button></div></article></div>
+</div></dialog>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 // ---------- 3D hero object ----------
 (function(){
+  try{
   const cv=document.getElementById('bg');
   const R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
   R.setPixelRatio(Math.min(devicePixelRatio,2));
@@ -195,6 +235,7 @@ footer{text-align:center;color:var(--mut);padding:70px 5vw 40px;font-size:.9rem}
     R.render(S,C);requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);
+  }catch(e){console.error('3D hero',e)}
 })();
 
 // ---------- 3D tilt cards ----------
@@ -208,31 +249,42 @@ document.querySelectorAll('.card,.ph,.soc a').forEach(c=>{
   c.addEventListener('pointerleave',()=>{c.style.transform=''});
 });
 document.getElementById('y').textContent=new Date().getFullYear();
+
+// ---------- Profile photo lightbox ----------
+(function(){
+  const ph=document.querySelector('.ph'),dlg=document.getElementById('photoDlg'),big=document.getElementById('photoBig');
+  if(!ph||!dlg||!big)return;
+  const open=()=>{const im=ph.querySelector('img');if(!im)return;big.src=im.src;big.alt=im.alt||'';dlg.showModal()};
+  ph.addEventListener('click',open);
+  ph.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+  document.getElementById('photoX').addEventListener('click',()=>dlg.close());
+  dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+})();
 </script>
 
 <script>
 // ---------- Language switcher (RW / EN / FR) ----------
 const L={
-rw:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, Web Developer ukorera muri Kamonyi District, mu Rwanda.",nav_home:"Ahabanza",nav_skills:"Ubumenyi",nav_projects:"Imishinga",nav_contact:"Nyandikire",signin:"Injira",signout:"Sohoka",lang_l:"Ururimi",lang_s:"Ururimi",more:"Kanda urebe ibisobanuro →",need:"Injira (Sign In) kugira ngo ubone ibisobanuro birambuye by’iyi serivisi.",d1:"Ntekereza ibitekerezo bishya, nkabihindura imishinga isobanutse ifite intego, gahunda n’intambwe zo kubigeraho, kuva ku gitekerezo kugeza ku musaruro.",d2:"Nkora imbuga za interineti zihuta kandi zikora kuri telefoni na mudasobwa, nkoresheje HTML, CSS, JavaScript na Firebase, kuva ku gishushanyo kugeza zishyizwe kuri interineti.",d3:"Ntunganya amashusho (video): nyatondeka, nkayatunganya, nkanoza amajwi n’amabara, kugira ngo ubutumwa bugere neza ku babureba.",d4:"Nkora ubushakashatsi ku isoko: gusobanukirwa abakiriya, ibyo bakeneye n’abo bahanganye na bo, kugira ngo ibicuruzwa na serivisi bitegurwe hashingiwe ku makuru nyakuri.",d5:"Nkunda kwigisha no gusangiza abandi ibyo nzi, mbibasobanurira mu buryo bworoshye kandi mbafasha gukura mu bumenyi bwabo.",d6:"Nkina filimi kandi nitabira ibikorwa by’ikinamico, nkoresha ijwi, umubiri n’amarangamutima mu kugeza inkuru ku bareba.",alt:"Ifoto ya MWISENEZA Janvier",
+rw:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, Web Developer ukorera muri Kamonyi District, mu Rwanda.",nav_home:"Ahabanza",nav_skills:"Ubumenyi",nav_projects:"Imishinga",nav_contact:"Nyandikire",signin:"Injira",signout:"Sohoka",lang_l:"Ururimi",s7:"Gutwara ibinyabiziga (Category A & B Driving)",d7:"Ubuhanga n’ubushobozi bwo gutwara moto n’imodoka (Category A & B) mu mutekano.",s8:"Gutoza ikipe y’umupira w’amaguru (Football Coaching)",d8:"Gutegura imyitozo, kuyobora abakinnyi no gutoza ikipe y’umupira w’amaguru.",s9:"Gusiga no gutera amarangi (Painting & Decorating)",d9:"Gusiga amarangi neza no kunoza inyubako mu buryo bugezweho kandi bubereye ijisho.",s10:"Gusesengura no gutanga ibitego/amanota (Judging & Predicting)",d10:"Gusesengura amarushanwa, gutanga amanota (Judging) no guhanura ibishobora kuba (Predicting) mu mikino n’ibikorwa.",s11:"Gushakisha amakuru, amahirwe n’ibisubizo (Information & Opportunity Research)",d11:"Mfite ubushobozi bwo gushakisha amakuru yimbitse, kumenya amahirwe mashya no kubona inzira zisubiza ibibazo mu buryo bwihuse kandi bunoze.",p3t:"Kigali Update Score",p3d:"Urubuga rutanga amakuru agezweho n’ibitego by’imikino (Live Scores & Sports Updates) mu Rwanda no ku isi.",kg_t:"Kigali Update Score",kg_d:"Amakuru n’ibitego by’imikino bigezweho.",kg_b:"Reba umushinga",closex:"✕ Funga",zoom:"Kuzuza ifoto",dash:"Konti yanjye",hub_w:"Murakaza neza, {n}! Urakoze kwinjira mu rubuga rwa <span translate='no' class='notranslate'>MWISENEZA Janvier</span>. Hano ni ho uzajya ubonera imishinga mishya, amasomo, na Kigali Update Score.",hub_back:"Subira ku rubuga",cs:"Bizaza vuba",c1t:"Ubumenyi burambuye",c1d:"Reba ubumenyi n’ubushobozi mfite n’ibisobanuro byabyo.",c2t:"Imishinga yanjye",c2d:"Reba imishinga nakoze.",c3t:"Ibikorwa bishya",c3d:"Imishinga, amasomo n’ibikorwa by’ikoranabuhanga biri gutegurwa.",go_sk:"Reba ubumenyi",p1t:"Ishuri Online",lang_s:"Ururimi",more:"Kanda urebe ibisobanuro →",need:"Injira (Sign In) kugira ngo ubone ibisobanuro birambuye by’iyi serivisi.",d1:"Ntekereza ibitekerezo bishya, nkabihindura imishinga isobanutse ifite intego, gahunda n’intambwe zo kubigeraho, kuva ku gitekerezo kugeza ku musaruro.",d2:"Nkora imbuga za interineti zihuta kandi zikora kuri telefoni na mudasobwa, nkoresheje HTML, CSS, JavaScript na Firebase, kuva ku gishushanyo kugeza zishyizwe kuri interineti.",d3:"Ntunganya amashusho (video): nyatondeka, nkayatunganya, nkanoza amajwi n’amabara, kugira ngo ubutumwa bugere neza ku babureba.",d4:"Nkora ubushakashatsi ku isoko: gusobanukirwa abakiriya, ibyo bakeneye n’abo bahanganye na bo, kugira ngo ibicuruzwa na serivisi bitegurwe hashingiwe ku makuru nyakuri.",d5:"Nkunda kwigisha no gusangiza abandi ibyo nzi, mbibasobanurira mu buryo bworoshye kandi mbafasha gukura mu bumenyi bwabo.",d6:"Nkina filimi kandi nitabira ibikorwa by’ikinamico, nkoresha ijwi, umubiri n’amarangamutima mu kugeza inkuru ku bareba.",alt:"Ifoto ya MWISENEZA Janvier",
 loc:"📍 Ndi umunyeshuri wiga muri <span translate='no' class='notranslate'>TTC Muhanga</span>, nkaba ntuye mu Karere ka <span translate='no' class='notranslate'>Kamonyi</span>, mu Rwanda.",hi:"Muraho, nitwa",role:"Web Developer wubaka imbuga zigezweho kandi zikora neza",intro:"Nkora imbuga za interineti zihuta, zifite ishusho nziza, n’imikorere ishimisha uzikoresha, kuva kuri telefoni kugeza kuri mudasobwa.",cta1:"Nyandikire",cta2:"Reba imishinga",
 sk_title:"Ubumenyi n’Ubushobozi mfite",sk_sub:"Ibyo nkora n’ibyo nshoboye.",s1:"Guhanga udushya no gutegura imishinga itandukanye",s2:"Kubaka no gukora imbuga za internet",s3:"Gutunganya no kunoza amashusho (Video Editing)",s4:"Gukora ubushakashatsi ku isoko (Marketing Research)",s5:"Kwigisha no gusangiza abandi ubumenyi",s6:"Gukina filimi no kwitabira ibikorwa by’ikinamico",
-gate_t:"Iki gice gifunze.",gate_b:"Injira (Sign In) kugira ngo ubibone",pr_title:"Imishinga",pr_sub:"Imishinga nyayo nakoze.",p1d:"Urubuga rwo kwiga ku giti cyawe mu Rwanda, rufite ahantu ha 3D hitwa “Living Technology Tree” hakoresha Three.js.",p2t:"Portfolio yanjye",p2d:"Uru rubuga: dosiye imwe ya HTML ifite 3D animations, Firebase Authentication na Firestore.",
+gate_t:"Iki gice gifunze.",gate_b:"Injira (Sign In) kugira ngo ubibone",pr_title:"Imishinga",pr_sub:"Imishinga nyayo nakoze.",p1d:"Urubuga rwo kwiga no gusangira ubumenyi mu buryo bugezweho mu Rwanda.",p2t:"Portfolio yanjye",p2d:"Urubuga rwanjye bwite rwerekana ibyo nkora, ubumenyi mfite, n’uburyo bwo kunyandikira mu ndimi eshatu.",
 ct_title:"Nyandikire",ct_sub:"Ufite umushinga cyangwa ikibazo? Ohereza ubutumwa, nzagusubiza vuba.",lb_n:"Izina",lb_e:"Imeyili",lb_m:"Ubutumwa",send:"Ohereza",call:"Cyangwa umpamagare:",
 dt_in:"Injira",dt_up:"Fungura konti",google:"Injira ukoresheje Google",pw:"Ijambo ry’ibanga",sw_up:"Nta konti ufite? Fungura nshya",sw_in:"Ufite konti? Injira",close:"Funga",
 e_cred:"Imeyili cyangwa ijambo ry’ibanga si byo.",e_used:"Iyi meyili isanzwe ifite konti. Injira.",e_weak:"Ijambo ry’ibanga rigomba kuba rifite nibura inyuguti 6.",e_mail:"Imeyili si yo.",e_popup:"Idirishya rya Google rirafunzwe.",e_domain:"Uru rubuga ntiruremererwa muri Firebase (Authorized domains).",e_op:"Ubu buryo bwo kwinjira ntiburafungurwa muri Firebase Console.",e_gen:"Ntibyakunze. Ongera ugerageze.",
 st_fill:"Uzuza izina n’ubutumwa.",st_mail:"Andika imeyili yemewe.",st_send:"Birimo koherezwa...",st_ok:"✅ Murakoze! Ubutumwa bwawe bwoherejwe neza kuri <span translate='no' class='notranslate'>MWISENEZA Janvier</span>.",st_fail:"Ntibyakunze koherezwa. Ongera ugerageze nyuma gato."},
-en:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, a Web Developer based in Kamonyi District, Rwanda.",nav_home:"Home",nav_skills:"Skills",nav_projects:"Projects",nav_contact:"Contact",signin:"Sign In",signout:"Sign Out",lang_l:"Language",lang_s:"Lang",more:"Tap for details →",need:"Sign In to see the detailed description of this service.",d1:"I come up with new ideas and turn them into clear projects with goals, a plan and the steps needed to deliver them, from the first idea to the final result.",d2:"I design and build fast websites that work on phones and computers, using HTML, CSS, JavaScript and Firebase, from the first design to going live.",d3:"I edit videos: arranging and cutting clips, and improving sound and colour so the message reaches viewers clearly.",d4:"I research the market: understanding customers, their needs and the competition, so products and services are planned with real information.",d5:"I enjoy teaching and sharing what I know, explaining things simply and helping others grow their own skills.",d6:"I act in films and take part in theatre, using voice, body and emotion to bring stories to an audience.",alt:"Photo of MWISENEZA Janvier",
+en:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, a Web Developer based in Kamonyi District, Rwanda.",nav_home:"Home",nav_skills:"Skills",nav_projects:"Projects",nav_contact:"Contact",signin:"Sign In",signout:"Sign Out",lang_l:"Language",s7:"Driving (Category A & B)",d7:"The skill and ability to drive motorcycles and cars (Category A & B) safely.",s8:"Football coaching",d8:"Planning training sessions, guiding players and coaching a football team.",s9:"Painting & decorating",d9:"Applying paint neatly and improving buildings in a modern, pleasing way.",s10:"Judging & predicting",d10:"Analysing competitions, giving scores (Judging) and forecasting what may happen (Predicting) in sports and activities.",s11:"Information & opportunity research",d11:"Skilled in uncovering vital information, identifying new opportunities, and finding smart, practical solutions to complex challenges.",p3t:"Kigali Update Score",p3d:"A website giving the latest news and scores from sports (Live Scores & Sports Updates) in Rwanda and around the world.",kg_t:"Kigali Update Score",kg_d:"Latest sports news and scores.",kg_b:"View project",closex:"✕ Close",zoom:"Enlarge photo",dash:"My Hub",hub_w:"Welcome, {n}! Thank you for signing in to <span translate='no' class='notranslate'>MWISENEZA Janvier</span>’s website. Here you will find new projects, lessons, and Kigali Update Score.",hub_back:"Back to site",cs:"Coming Soon",c1t:"Skills in detail",c1d:"Explore my skills and abilities with full descriptions.",c2t:"My projects",c2d:"See the projects I have worked on.",c3t:"New activities",c3d:"Projects, lessons and digital activities being prepared.",go_sk:"View skills",p1t:"Ishuri Online",lang_s:"Lang",more:"Tap for details →",need:"Sign In to see the detailed description of this service.",d1:"I come up with new ideas and turn them into clear projects with goals, a plan and the steps needed to deliver them, from the first idea to the final result.",d2:"I design and build fast websites that work on phones and computers, using HTML, CSS, JavaScript and Firebase, from the first design to going live.",d3:"I edit videos: arranging and cutting clips, and improving sound and colour so the message reaches viewers clearly.",d4:"I research the market: understanding customers, their needs and the competition, so products and services are planned with real information.",d5:"I enjoy teaching and sharing what I know, explaining things simply and helping others grow their own skills.",d6:"I act in films and take part in theatre, using voice, body and emotion to bring stories to an audience.",alt:"Photo of MWISENEZA Janvier",
 loc:"📍 I am a student at <span translate='no' class='notranslate'>TTC Muhanga</span>, residing in <span translate='no' class='notranslate'>Kamonyi</span> District, Rwanda.",hi:"Hello, I’m",role:"A Web Developer who builds modern websites that work well",intro:"I build fast, good-looking websites with an experience users enjoy, from phones to desktop computers.",cta1:"Contact me",cta2:"See projects",
 sk_title:"My Skills and Abilities",sk_sub:"What I do and what I am capable of.",s1:"Innovation and planning of different projects",s2:"Building and developing websites",s3:"Video editing and enhancement",s4:"Marketing research",s5:"Teaching and sharing knowledge with others",s6:"Acting in films and taking part in theatre",
-gate_t:"This section is locked.",gate_b:"Sign In to view it",pr_title:"Projects",pr_sub:"Real projects I have worked on.",p1d:"A self-paced learning platform for Rwanda with a 3D environment called “Living Technology Tree”, built with Three.js.",p2t:"My Portfolio",p2d:"This website: a single HTML file with 3D animations, Firebase Authentication and Firestore.",
+gate_t:"This section is locked.",gate_b:"Sign In to view it",pr_title:"Projects",pr_sub:"Real projects I have worked on.",p1d:"A platform for learning and sharing knowledge in a modern way in Rwanda.",p2t:"My Portfolio",p2d:"My personal website showing what I do, the skills I have, and how to contact me, in three languages.",
 ct_title:"Contact me",ct_sub:"Have a project or a question? Send a message and I will reply soon.",lb_n:"Name",lb_e:"Email",lb_m:"Message",send:"Send",call:"Or call me:",
 dt_in:"Sign In",dt_up:"Create account",google:"Sign in with Google",pw:"Password",sw_up:"No account? Create one",sw_in:"Have an account? Sign in",close:"Close",
 e_cred:"Incorrect email or password.",e_used:"This email already has an account. Sign in instead.",e_weak:"The password must have at least 6 characters.",e_mail:"The email address is not valid.",e_popup:"The Google window was closed.",e_domain:"This site is not allowed in Firebase (Authorized domains).",e_op:"This sign-in method is not enabled in the Firebase Console.",e_gen:"Something went wrong. Please try again.",
 st_fill:"Please fill in your name and message.",st_mail:"Enter a valid email address.",st_send:"Sending...",st_ok:"✅ Thank you! Your message has been successfully sent to <span translate='no' class='notranslate'>MWISENEZA Janvier</span>.",st_fail:"Could not send your message. Please try again shortly."},
-fr:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, développeur web basé dans le district de Kamonyi, au Rwanda.",nav_home:"Accueil",nav_skills:"Compétences",nav_projects:"Projets",nav_contact:"Contact",signin:"Connexion",signout:"Déconnexion",lang_l:"Langue",lang_s:"Langue",more:"Voir les détails →",need:"Connectez-vous pour voir la description détaillée de ce service.",d1:"J’imagine de nouvelles idées et je les transforme en projets clairs, avec des objectifs, un plan et les étapes pour les réaliser, de l’idée au résultat final.",d2:"Je conçois et développe des sites rapides qui fonctionnent sur téléphone et ordinateur, avec HTML, CSS, JavaScript et Firebase, du design à la mise en ligne.",d3:"Je monte des vidéos : assemblage et découpe des plans, amélioration du son et des couleurs pour que le message soit clair.",d4:"Je réalise des études de marché : comprendre les clients, leurs besoins et la concurrence, pour décider à partir d’informations concrètes.",d5:"J’aime enseigner et partager ce que je sais, en expliquant simplement et en aidant les autres à progresser.",d6:"Je joue dans des films et participe à des pièces de théâtre, en utilisant la voix, le corps et l’émotion pour raconter des histoires.",alt:"Photo de MWISENEZA Janvier",
+fr:{title:"MWISENEZA Janvier | Portfolio",desc:"MWISENEZA Janvier, développeur web basé dans le district de Kamonyi, au Rwanda.",nav_home:"Accueil",nav_skills:"Compétences",nav_projects:"Projets",nav_contact:"Contact",signin:"Connexion",signout:"Déconnexion",lang_l:"Langue",s7:"Conduite (permis catégories A et B)",d7:"Compétence pour conduire motos et voitures (catégories A et B) en toute sécurité.",s8:"Entraînement d’une équipe de football",d8:"Préparer les entraînements, encadrer les joueurs et entraîner une équipe de football.",s9:"Peinture et décoration",d9:"Peindre avec soin et embellir les bâtiments de façon moderne et esthétique.",s10:"Analyse, notation et pronostics",d10:"Analyser les compétitions, attribuer des notes (Judging) et anticiper les résultats (Predicting) dans le sport et les activités.",s11:"Recherche d’informations et d’opportunités",d11:"Capacité à rechercher des informations clés, identifier de nouvelles opportunités et trouver des solutions efficaces aux défis.",p3t:"Kigali Update Score",p3d:"Un site qui fournit les dernières informations et scores sportifs (Live Scores & Sports Updates) au Rwanda et dans le monde.",kg_t:"Kigali Update Score",kg_d:"Dernières nouvelles et scores sportifs.",kg_b:"Voir le projet",closex:"✕ Fermer",zoom:"Agrandir la photo",dash:"Mon espace",hub_w:"Bienvenue, {n} ! Merci de vous être connecté au site de <span translate='no' class='notranslate'>MWISENEZA Janvier</span>. Vous y trouverez de nouveaux projets, des cours et Kigali Update Score.",hub_back:"Retour au site",cs:"Bientôt disponible",c1t:"Compétences en détail",c1d:"Découvrez mes compétences et leurs descriptions détaillées.",c2t:"Mes projets",c2d:"Voir les projets que j’ai réalisés.",c3t:"Nouvelles activités",c3d:"Projets, cours et activités numériques en préparation.",go_sk:"Voir les compétences",p1t:"Ishuri Online",lang_s:"Langue",more:"Voir les détails →",need:"Connectez-vous pour voir la description détaillée de ce service.",d1:"J’imagine de nouvelles idées et je les transforme en projets clairs, avec des objectifs, un plan et les étapes pour les réaliser, de l’idée au résultat final.",d2:"Je conçois et développe des sites rapides qui fonctionnent sur téléphone et ordinateur, avec HTML, CSS, JavaScript et Firebase, du design à la mise en ligne.",d3:"Je monte des vidéos : assemblage et découpe des plans, amélioration du son et des couleurs pour que le message soit clair.",d4:"Je réalise des études de marché : comprendre les clients, leurs besoins et la concurrence, pour décider à partir d’informations concrètes.",d5:"J’aime enseigner et partager ce que je sais, en expliquant simplement et en aidant les autres à progresser.",d6:"Je joue dans des films et participe à des pièces de théâtre, en utilisant la voix, le corps et l’émotion pour raconter des histoires.",alt:"Photo de MWISENEZA Janvier",
 loc:"📍 Je suis étudiant à <span translate='no' class='notranslate'>TTC Muhanga</span> et je réside dans le district de <span translate='no' class='notranslate'>Kamonyi</span>, au Rwanda.",hi:"Bonjour, je m’appelle",role:"Développeur web qui crée des sites modernes et performants",intro:"Je crée des sites web rapides, soignés et agréables à utiliser, du téléphone à l’ordinateur.",cta1:"Me contacter",cta2:"Voir les projets",
 sk_title:"Mes compétences et capacités",sk_sub:"Ce que je fais et ce que je sais faire.",s1:"Innovation et planification de projets variés",s2:"Création et développement de sites web",s3:"Montage et amélioration vidéo",s4:"Étude de marché",s5:"Enseigner et partager ses connaissances",s6:"Jouer dans des films et participer à des activités théâtrales",
-gate_t:"Cette section est verrouillée.",gate_b:"Connectez-vous pour y accéder",pr_title:"Projets",pr_sub:"Des projets réels que j’ai réalisés.",p1d:"Une plateforme d’apprentissage autonome pour le Rwanda, avec un environnement 3D appelé « Living Technology Tree », créé avec Three.js.",p2t:"Mon portfolio",p2d:"Ce site : un seul fichier HTML avec des animations 3D, Firebase Authentication et Firestore.",
+gate_t:"Cette section est verrouillée.",gate_b:"Connectez-vous pour y accéder",pr_title:"Projets",pr_sub:"Des projets réels que j’ai réalisés.",p1d:"Une plateforme moderne d’apprentissage et de partage des connaissances au Rwanda.",p2t:"Mon portfolio",p2d:"Mon site personnel présentant mon travail, mes compétences et comment me contacter, en trois langues.",
 ct_title:"Me contacter",ct_sub:"Un projet ou une question ? Envoyez un message, je vous répondrai rapidement.",lb_n:"Nom",lb_e:"E-mail",lb_m:"Message",send:"Envoyer",call:"Ou appelez-moi :",
 dt_in:"Connexion",dt_up:"Créer un compte",google:"Se connecter avec Google",pw:"Mot de passe",sw_up:"Pas de compte ? Créez-en un",sw_in:"Déjà un compte ? Connectez-vous",close:"Fermer",
 e_cred:"E-mail ou mot de passe incorrect.",e_used:"Cet e-mail a déjà un compte. Connectez-vous.",e_weak:"Le mot de passe doit contenir au moins 6 caractères.",e_mail:"L’adresse e-mail n’est pas valide.",e_popup:"La fenêtre Google a été fermée.",e_domain:"Ce site n’est pas autorisé dans Firebase (Authorized domains).",e_op:"Cette méthode de connexion n’est pas activée dans la console Firebase.",e_gen:"Une erreur est survenue. Réessayez.",
@@ -240,20 +292,27 @@ st_fill:"Veuillez remplir votre nom et votre message.",st_mail:"Saisissez une ad
 };
 let lang='rw';
 try{const sv=localStorage.getItem('lang');if(L[sv])lang=sv}catch(e){}
-window.t=k=>(L[lang]&&L[lang][k])||L.rw[k]||k;
-function apply(){
-  document.documentElement.lang=lang;
-  document.querySelectorAll('[data-t]').forEach(e=>{e.textContent=t(e.dataset.t)});
-  document.querySelectorAll('[data-h]').forEach(e=>{e.innerHTML=t(e.dataset.h)});
-  document.title=t('title');
-  document.querySelector('meta[name=description]').setAttribute('content',t('desc'));
-  const im=document.querySelector('.ph img');if(im)im.alt=t('alt');
-  document.querySelector('.lang').setAttribute('aria-label',t('lang_l'));
-  document.querySelectorAll('.lang button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.l===lang)));
-  dispatchEvent(new Event('langchange'));
+const tr=k=>(L[lang]&&L[lang][k])||L.rw[k]||k;
+window.t=tr;
+function setLang(l){
+  try{
+    if(!L[l])l='rw';
+    lang=l;
+    try{localStorage.setItem('lang',l)}catch(e){}
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=tr(e.dataset.i18n)});
+    document.querySelectorAll('[data-i18n-html]').forEach(e=>{e.innerHTML=tr(e.dataset.i18nHtml)});
+    document.title=tr('title');
+    const md=document.querySelector('meta[name=description]');if(md)md.setAttribute('content',tr('desc'));
+    const im=document.querySelector('.ph img');if(im)im.alt=tr('alt');
+    const pb=document.querySelector('.ph');if(pb)pb.setAttribute('aria-label',tr('zoom'));
+    const lg=document.querySelector('.lang');if(lg)lg.setAttribute('aria-label',tr('lang_l'));
+    document.querySelectorAll('.lang button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.l===l)));
+    dispatchEvent(new Event('langchange'));
+  }catch(err){console.error('setLang',err)}
 }
-document.querySelectorAll('.lang button').forEach(x=>x.addEventListener('click',()=>{lang=x.dataset.l;try{localStorage.setItem('lang',lang)}catch(e){}apply()}));
-apply();
+document.addEventListener('click',e=>{const x=e.target.closest&&e.target.closest('[data-l]');if(x)setLang(x.dataset.l)});
+setLang(lang);
 </script>
 
 <script type="module">
@@ -279,64 +338,15 @@ const auth=getAuth(app);
 const $=id=>document.getElementById(id);
 const t=k=>window.t(k);
 const f=$('cf'),st=$('st'),b=$('b'),n=$('nm'),e1=$('em'),m=$('ms'),dlg=$('dlg'),ae=$('ae'),authBtn=$('authBtn');
-let user=null,up=false,pending=null,cur=null;
-const sdlg=$('sdlg'),dn=$('dn');
-let sk='';
+const sdlg=$('sdlg'),dn=$('dn'),hub=$('hub'),av=$('av'),so=$('so');
+let user=null,up=false,pending=null,afterHub=null,cur=null,signing=false,sk='';
 const say=(k,c)=>{sk=k;st.innerHTML=k?t(k):'';st.className=c||''};
 const ek={'auth/invalid-credential':'e_cred','auth/email-already-in-use':'e_used','auth/weak-password':'e_weak','auth/invalid-email':'e_mail','auth/popup-closed-by-user':'e_popup','auth/unauthorized-domain':'e_domain','auth/operation-not-allowed':'e_op'};
 const err=c=>t(ek[c]||'e_gen');
-const render=()=>{$('dt').textContent=t(up?'dt_up':'dt_in');$('ab').textContent=t(up?'dt_up':'dt_in');$('sw').textContent=t(up?'sw_in':'sw_up');authBtn.textContent=t(user?'signout':'signin')};
-addEventListener('langchange',()=>{ae.textContent='';st.innerHTML=sk?t(sk):'';if(b.disabled)b.textContent=t('st_send');render();if(sdlg.open&&cur){$('sdt').textContent=t('s'+cur);$('sdp').textContent=t('d'+cur)}});
+const render=()=>{$('dt').textContent=t(up?'dt_up':'dt_in');$('ab').textContent=t(up?'dt_up':'dt_in');$('sw').textContent=t(up?'sw_in':'sw_up');authBtn.textContent=t('signin');if(user){av.title=t('dash');av.setAttribute('aria-label',t('dash'))}};
+const fillSd=()=>{if(cur){$('sdt').textContent=t(cur.dataset.ck);$('sdp').textContent=t(cur.dataset.dk)}};
+addEventListener('langchange',()=>{ae.textContent='';st.innerHTML=sk?t(sk):'';if(b.disabled)b.textContent=t('st_send');render();if(sdlg.open)fillSd();if(hub.open)fillHub()});
 render();
-const showSkill=k=>{
-  const c=document.querySelector('.sk[data-sk="'+k+'"]');if(!c)return;
-  cur=k;const im=c.querySelector('.cimg');$('sic').hidden=!im;if(im)$('sic').src=im.src;
-  $('sdt').textContent=t('s'+k);$('sdp').textContent=t('d'+k);
-  if(!sdlg.open)sdlg.showModal();
-};
-const open=k=>{pending=k||null;dn.hidden=!pending;ae.textContent='';dlg.showModal()};
-dlg.addEventListener('close',()=>{if(!user)pending=null});
-document.querySelectorAll('.sk').forEach(c=>{
-  const go=()=>{const k=c.dataset.sk;user?showSkill(k):open(k)};
-  c.addEventListener('click',go);
-  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
-});
-$('scl').addEventListener('click',()=>sdlg.close());
-authBtn.addEventListener('click',()=>user?signOut(auth):open());
-$('cl').addEventListener('click',()=>dlg.close());
-$('sw').addEventListener('click',()=>{up=!up;ae.textContent='';render()});
-$('gg').addEventListener('click',()=>signInWithPopup(auth,new GoogleAuthProvider()).then(()=>dlg.close()).catch(x=>ae.textContent=err(x.code)));
-$('af').addEventListener('submit',async ev=>{
-  ev.preventDefault();ae.textContent='';
-  try{
-    const a=$('ae1').value.trim(),p=$('ap').value;
-    await (up?createUserWithEmailAndPassword:signInWithEmailAndPassword)(auth,a,p);
-    $('af').reset();dlg.close();
-  }catch(x){ae.textContent=err(x.code)}
-});
-onAuthStateChanged(auth,u=>{
-  const was=!!user;user=u;
-  render();
-  if(u&&pending){const k=pending;pending=null;if(dlg.open)dlg.close();showSkill(k)}
-  if(u){n.value=u.displayName||(u.email||'').split('@')[0];e1.value=u.email||''}else if(was){f.reset()}
-});
-f.addEventListener('submit',async ev=>{
-  ev.preventDefault();
-  if(b.disabled)return;
-  const name=n.value.trim(),email=e1.value.replace(/[\u200B-\u200D\uFEFF]/g,'').trim(),message=m.value.trim();
-  if(!name||!message)return say('st_fill','er');
-  if(!/^\S+@\S+\.\S+$/.test(email))return say('st_mail','er');
-  say('');b.disabled=true;b.textContent=t('st_send');
-  try{
-  const FS='https://formspree.io/f/mzerepkv';
-  const res=await Promise.allSettled([
-    addDoc(collection(db,'messages'),{name,email,message,uid:user?user.uid:null,createdAt:serverTimestamp()}),
-    fetch(FS,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message})}).then(r=>{if(!r.ok)throw new Error('Formspree '+r.status)})
-  ]);
-  res.forEach(r=>{if(r.status==='rejected')console.error(r.reason)});
-  if(res.some(r=>r.status==='fulfilled')){f.reset();say('st_ok','ok')}else{say('st_fail','er')}
-  }catch(x){console.error(x);say('st_fail','er')}finally{b.disabled=false;b.textContent=t('send')}
-});
-</script>
-</body>
-</html>
+
+// ---- clickable cards (skills + projects) ----
+const
